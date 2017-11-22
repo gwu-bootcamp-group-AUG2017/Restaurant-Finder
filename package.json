@@ -1,0 +1,28 @@
+{
+  "name": "restaurant-finder",
+  "version": "1.0.0",
+  "description": "Project 2 - Dream Team - Restaurant Finder",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gwu-bootcamp-group-AUG2017/Restaurant-Finder.git"
+  },
+  "author": "Dream Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gwu-bootcamp-group-AUG2017/Restaurant-Finder/issues"
+  },
+  "homepage": "https://github.com/gwu-bootcamp-group-AUG2017/Restaurant-Finder#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.10",
+    "mysql": "^2.15.0",
+    "sequelize": "^4.22.11",
+    "sequelize-cli": "^3.1.0"
+  }
+}
