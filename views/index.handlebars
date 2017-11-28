@@ -1,1 +1,50 @@
-index.handlebars
+<div class="row">
+  <center>
+  
+    <div class="col-md-10">
+  
+        {{#each diners}}
+
+      
+
+          <form action="diner/update/{{id}}" method="POST">
+            <div class="input-group">
+              <li class="form-control">
+                Type: {{id}} 
+                Name: {{name}} 
+                email: {{email}}
+                food type:
+               <select name="type" id="type">
+                  {{#select type}}
+                    <option value=" BBQ">BBQ</option>
+                      <option value="Chinese">Chinese</option>
+                      <option value="Italian">Italian</option>
+                      <option value="Seafood">Seafood</option>
+                      <option value="Steak">Steak</option>
+                  {{/select}}
+                  </select>
+
+                  max price: <select name="price" id="price">
+                  {{#select max_price}}
+                      <option value="1">Cheap</option>
+                      <option value="2">Moderate</option>
+                      <option value="3">Expensive</option>
+                      <option value="4">I got a Raise</option>
+                  {{/select}}
+                </select>
+
+                </li>
+                <span class="input-group-btn">
+                  <button type="submit" class="btn btn-primary" >Update</button>
+                 
+                </span>
+            </div>
+          </form>
+ 
+        {{/each}}
+
+      </div>
+    </div>
+
+
+
