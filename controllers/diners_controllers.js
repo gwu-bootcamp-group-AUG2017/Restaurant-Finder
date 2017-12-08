@@ -2,8 +2,7 @@
 var express = require('express');
 var router = express.Router();
 var diner = require('../models/diners.js');
-
-
+var request = require('request');
 // Create routes
 // ----------------------------------------------------
 // Index Redirect
@@ -24,20 +23,12 @@ router.get('/index', function (req, res) {
 
 // Create a New Burger
 router.post('/diner/create', function (req, res) {
-  diner.insertOne(req.body.name, req.body.email, req.body.price,  req.body.type, function() {
+  diner.insertOne(req.body.name, req.body.location, req.body.price,  function() {
+  	
     res.redirect('/index');
   });
 });
 
-
-// Devour a Burger
-router.post('/diner/update/:id', function (req, res) {
- diner.updateOne(req.params.id,  req.body.type, req.body.price, function() {
-   res.redirect('/index');
-  });
-});
-// ----------------------------------------------------
-
-
+ 
 // Export routes
 module.exports = router;
