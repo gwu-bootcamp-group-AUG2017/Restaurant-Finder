@@ -2,7 +2,7 @@
 var express = require('express');
 var router = express.Router();
 var diner = require('../models/diners.js');
-var request = require('request');
+//var request = require('request');
 // Create routes
 // ----------------------------------------------------
 // Index Redirect
