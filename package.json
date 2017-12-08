@@ -17,13 +17,13 @@
   },
   "homepage": "https://github.com/gwu-bootcamp-group-AUG2017/Restaurant-Finder#readme",
   "dependencies": {
+    "assets": "^3.0.0",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
     "express-helpers": "^1.3.2",
     "method-override": "^2.3.10",
-    "mysql": "^2.15.0",
-    "sequelize": "^4.22.11",
-    "sequelize-cli": "^3.1.0"
+    "mysql": "^2.15.0"
+   
   }
 }

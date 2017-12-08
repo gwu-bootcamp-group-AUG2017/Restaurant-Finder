@@ -8,7 +8,6 @@ USE restaurant_db;
 CREATE TABLE diners(
 id INTEGER AUTO_INCREMENT PRIMARY KEY,
 name VARCHAR(50),
-email VARCHAR(50),
-max_price int,
+location VARCHAR(50),
 type VARCHAR(50),
 date TIMESTAMP);

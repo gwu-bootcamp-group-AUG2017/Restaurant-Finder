@@ -33,7 +33,7 @@ var orm = {
   },
 
   // insertOne()
-  insertOne: function(name, email, price, type, callback){
+  insertOne: function(name, location, price, callback){
 
     // Create a new timestamp
     // ----------------------------------------------------------
@@ -74,26 +74,13 @@ var orm = {
     // Run MySQL Query
     connection.query('INSERT INTO diners SET ?', {
       name: name,
-      email: email,
+      location: location,
       max_price: price,
-      type: type,
       date: timestamp
     }, function (err, result) {
       if (err) throw err;
       callback(result);
     });
-
-  },
-
-  // updateOne()
-  updateOne: function(id, type, price, callback){
-
-    // Run MySQL Query
-    connection.query('UPDATE diners SET ?,? WHERE ?', [{type: type}, {max_price: price},{id: id}], function (err, result) {
-        if (err) throw err;
-        console.log("updated");
-        callback(result);
-      });
 
   }
 
