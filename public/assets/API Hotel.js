@@ -39,17 +39,13 @@ function setHotel(location, price) {
 
                     
                     var name = responseId.result.name;
- //                   console.log(name);
                     var h4 = document.createElement("P");
                     var nameText = document.createTextNode(name);
                     h4.appendChild(nameText);
                     names.push(name)   
                     mountPoint1.appendChild(h4);
- 
-                   
                     
                     var rating = responseId.result.rating;
-//                    console.log(rating);
                     var h5 = document.createElement("P");
                     var ratingText = document.createTextNode("Rating: " + rating);
                     h5.appendChild(ratingText);
@@ -58,7 +54,6 @@ function setHotel(location, price) {
                     mountPoint2.appendChild(h5);
                     
                     var review = responseId.result.reviews[0].text;
-//                   console.log(review);
                     var h6 = document.createElement("P");
                     var reviewText = document.createTextNode(review);
                     h6.appendChild(reviewText);
@@ -83,10 +78,7 @@ function setHotel(location, price) {
                     links.push(url)
                  
                     mountPoint.appendChild(img);
-                    console.log('update')
-
-
-                })
+                 })
             })(i)
         }
     })
@@ -152,23 +144,18 @@ function setnightLife(location, price) {
                     mountPoint3.appendChild(h6);
 
                     var website = responseId.result.website;
-//                    console.log(website);
                     var a = $('<a />');
                     a.attr('href', website);
                     a.text('Visit their Website');
                     websites.push(website)
                     $(mountPoint4).append(a);
-                    
                     var photo = responseId.result.photos[0].photo_reference;
-                    console.log(photo);
                     var url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=254&maxheight=200&photoreference=" + photo + "&key=AIzaSyBGxXK3pm9NbMHCeqa6TcdWJxzGfI2TwG4"
                     var img = document.createElement("IMG");
                     img.src = url;
                     img.style = "height: 175px; width: 225px;"
                     links.push(url)
                     mountPoint.appendChild(img);
-                    console.log('update')
-
 
                 })
             })(i)
@@ -251,8 +238,6 @@ function setResturant(location, price) {
                     img.style = "height: 175px; width: 225px;"
                     links.push(url)
                     mountPoint.appendChild(img);
-                    console.log('update')
-
 
                 })
             })(i)
@@ -293,7 +278,6 @@ function showHide() {
     $(".rating").empty();
     $(".review").empty();
     $(".button").empty();
-    console.log(location);
     setHotel(location,price);
     setnightLife(location,price);
     setResturant(location,price);
