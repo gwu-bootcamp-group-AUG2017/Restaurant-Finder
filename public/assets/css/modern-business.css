@@ -30,10 +30,16 @@ body {
 }
 
 .form-group {
-  font-family: "Arial";
-  color: grey;
-  font-size: 18px;
-  font-weight: bolder;
+  font-family: "Arial", serif;
+  color: black;
+  font-size: 20px;
+ 
+}
+
+.btn-group {
+   display:inline-block;
+   margin-left: 35%;
+
 }
 
 .border-class
@@ -58,6 +64,13 @@ h2 {
 h3 {
   font-family:'Sree Krushnadevaraya', serif;
   font-size: 24px ;
+}
+
+.h4 {
+  font-family:'Sree Krushnadevaraya', serif;
+  font-size: 35px ;
+  color: red;
+  font-weight: bold;
 }
 
 
