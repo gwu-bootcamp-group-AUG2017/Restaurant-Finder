@@ -9,5 +9,5 @@ CREATE TABLE diners(
 id INTEGER AUTO_INCREMENT PRIMARY KEY,
 name VARCHAR(50),
 location VARCHAR(50),
-type VARCHAR(50),
+max_price int,
 date TIMESTAMP);
